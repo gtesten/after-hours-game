@@ -10,3 +10,94 @@
 .library-filters{grid-template-columns:2fr repeat(4,minmax(0,1fr))}
 @media(max-width:900px){.library-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.library-filters{grid-template-columns:1fr}.top-actions{justify-content:flex-start}}
+
+/* AFTER HOURS v3 — compact Jade-inspired draw-a-dare stage (original design) */
+html{scroll-behavior:auto;overflow-anchor:none}body{overflow-anchor:none}
+body.game-open .footer{display:none}
+body.game-open .header{margin-bottom:12px}
+#game{animation:none;overflow-anchor:none}
+#game button{scroll-margin:0}
+.play-heading{display:flex;justify-content:space-between;align-items:center;gap:14px;margin:0 0 10px}
+.play-heading .eyebrow{letter-spacing:.17em;font-size:10px}
+.play-heading h1{font-size:clamp(25px,3.1vw,36px);letter-spacing:-.045em;margin:1px 0 0}
+.quiet-end{border:1px solid #ffffff32;color:#efced7;border-radius:99px;background:#ffffff0b;padding:10px 15px;font-size:12px;font-weight:750;white-space:nowrap}
+.quiet-end span{font-size:17px;margin-left:7px}
+.play-toolbar{display:flex;align-items:center;justify-content:space-between;gap:11px;flex-wrap:wrap;padding:7px;border:1px solid #ffffff20;border-radius:14px;background:#211728;margin:0 auto 15px}
+.heat-switch{display:flex;flex:1;gap:5px}
+.heat-button{border:1px solid transparent;background:transparent;color:#cbb8c7;border-radius:9px;padding:10px 12px;min-height:42px;font-weight:800;font-size:12px;flex:1;white-space:nowrap}
+.heat-button.selected{background:linear-gradient(135deg,#e78da1,#f9c5c3);color:#37172a;box-shadow:0 5px 19px #e7779425}
+.heat-button span{color:inherit}
+.deck-toggle{display:flex;align-items:center;gap:10px;color:#cbb8c7;font-size:12px;font-weight:750;padding:0 7px}
+.deck-toggle select{background:#1a1220;color:#fff;border:1px solid #ffffff3a;border-radius:10px;padding:10px;font-size:12px;max-width:180px}
+.game-center{max-width:910px;margin:0 auto 22px;overflow-anchor:none}
+.play-stack{max-width:900px;margin:auto}
+.game-card{min-height:420px;padding:26px 33px;border-radius:22px;background:radial-gradient(circle at 77% 45%,#b974876b,transparent 41%),linear-gradient(136deg,#4a2845 0%,#60374f 55%,#35243e 100%);box-shadow:0 18px 65px #08050b8c;overflow-anchor:none}
+.game-card:before{content:'✶';font-size:230px;top:-104px;right:-25px;opacity:.65}
+.game-card .card-top span{font-size:10px;letter-spacing:.1em}
+.card-layout{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 245px;align-items:center;gap:14px;z-index:1;flex:1}
+.card-layout .card-main{max-width:560px}
+.card-layout .card-main h2{font-size:clamp(38px,5vw,61px);line-height:1.03;margin:8px 0 13px;letter-spacing:-.05em}
+.card-layout .card-main p{font-size:clamp(17px,2.2vw,22px);font-weight:650;line-height:1.45;max-width:560px}
+.card-layout .card-actor{font-size:13px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:6px;color:#ffe1e8}
+.example-zone{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;min-height:225px;z-index:1}
+.illustration-frame{display:flex;align-items:center;justify-content:center;width:240px;height:192px;border-radius:50%;background:radial-gradient(circle,#f7b9bf25 1%,transparent 70%)}
+.stick-scene{width:100%;height:100%;filter:drop-shadow(0 5px 15px #20122466)}
+.stick-scene .accent{stroke:#ffb9c7;fill:#ffb9c7;stroke-width:2}
+.example-caption{font-size:10px;letter-spacing:.14em;color:#ead0dd;font-weight:850}
+.card-foot{padding-top:12px;border-top:1px solid #ffffff27;align-items:center}
+.game-actions{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:9px;margin:12px 0 0}
+.game-actions .btn{width:100%;min-height:54px;font-size:15px;border-radius:13px}
+.play-under{display:flex;align-items:center;justify-content:space-between;gap:8px;color:#bfaebb;font-size:12px;margin:10px 5px}
+.play-under span:last-child{white-space:nowrap;color:#ffbfd0;font-weight:800}
+.compact-timer{display:flex;align-items:center;justify-content:center;gap:6px;margin:5px 0 14px}
+.timer-chip{background:#ffffff0d;border:1px solid #ffffff28;color:#ead9e1;border-radius:10px;padding:9px 13px;font-size:12px;font-weight:750;min-height:40px}
+.compact-timer strong{font-variant-numeric:tabular-nums;letter-spacing:.03em;color:#ffc4d0;font-size:18px;padding:0 11px}
+.more-play{border:1px solid #ffffff20;border-radius:14px;background:#1e1625;margin-top:6px;color:#f7e7ec}
+.more-play>summary{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:14px 18px;list-style:none;font-size:12px;font-weight:800}
+.more-play>summary::-webkit-details-marker{display:none}
+.more-play[open]>summary span{transform:rotate(180deg)}
+.more-play .game-side{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:0 12px 12px}
+.more-play .aside-panel{background:#2a1e30;padding:13px}
+.more-play .timer-readout{display:none}
+.more-play .game-metrics{grid-template-columns:repeat(2,1fr)}
+@media(max-width:760px){
+ .play-heading h1{font-size:28px}
+ .play-toolbar{flex-direction:column;align-items:stretch}
+ .heat-switch{width:100%}
+ .deck-toggle{justify-content:space-between;padding:0 5px 5px}
+ .card-layout{grid-template-columns:minmax(0,1fr) 200px}
+ .illustration-frame{width:195px;height:185px}
+ .more-play .game-side{grid-template-columns:1fr 1fr}
+}
+@media(max-width:650px){
+ body.game-open .header{height:56px;margin-bottom:10px}
+ #game .play-heading{margin-bottom:8px}
+ .play-heading h1{font-size:24px}
+ .quiet-end{padding:8px 11px;font-size:11px}
+ .play-toolbar{gap:3px;padding:5px;margin-bottom:10px}
+ .heat-switch{gap:2px}
+ .heat-button{font-size:10px;padding:10px 4px;white-space:normal;line-height:1.25}
+ .deck-toggle{font-size:11px}
+ .deck-toggle select{min-height:36px}
+ .game-card{min-height:470px;padding:18px 19px;border-radius:18px}
+ .game-card:before{font-size:180px;right:-20px;top:-70px}
+ .card-layout{display:flex;flex-direction:column;align-items:stretch;gap:2px;justify-content:center}
+ .card-layout .card-main{text-align:center;order:1}
+ .card-layout .card-main h2{font-size:clamp(32px,9.5vw,46px);margin:4px 0 9px}
+ .card-layout .card-main p{font-size:17px;line-height:1.4}
+ .card-layout .card-actor{font-size:11px}
+ .example-zone{order:2;min-height:146px;gap:0;margin:2px 0}
+ .illustration-frame{width:180px;height:132px}
+ .example-caption{font-size:9px}
+ .game-card .card-top span{font-size:9px;padding:7px}
+ .card-foot{font-size:10px}
+ .game-actions{gap:6px}
+ .game-actions .btn{font-size:12px;padding:10px 6px;min-height:48px}
+ .compact-timer{flex-wrap:wrap;justify-content:center}
+ .timer-chip{font-size:11px;padding:8px 9px}
+ .compact-timer strong{font-size:17px;padding:0 6px}
+ .play-under{font-size:10px}
+ .more-play .game-side{grid-template-columns:1fr}
+ .mobile-nav{padding-bottom:max(7px,env(safe-area-inset-bottom))}
+ body.game-open .game-center{padding-bottom:75px}
+}
