@@ -1,28 +1,33 @@
-# After Hours — v3 (free, private party game)
+# After Hours v6 — free browser game
 
-A self-contained, mobile-responsive adults-only game for consenting players. No accounts, subscription, tracking scripts or server-side storage.
+This is an original adult party dare game inspired by Jade's verified gameplay concepts, not a copy of Jade's card deck, source code, artwork, or brand.
 
-## Use it
+## Run it
 
-**Easiest:** Open `After-Hours-v3.html` in your browser (also provided separately). Everything is embedded in one HTML file.
+Open `index.html` in a current desktop browser, or publish the same file at GitHub Pages to play on iPhone and desktop.
 
-**Free website:** Upload all the contents of this folder (`index.html`, `styles.css`, `app.js`, `cards.js`, `quick-cards.js`, icons, manifest, and `sw.js`) to the root of a public GitHub repository. Under **Settings → Pages**, publish from the `main` branch at `/(root)`. Visit `https://YOUR-USERNAME.github.io/REPOSITORY-NAME/` after deployment.
+## Update your current GitHub Pages site
 
-## What changed in v3
+1. Go to https://github.com/gtesten/after-hours-game
+2. Open the existing `index.html`, choose **Edit** (pencil icon) and replace its entire contents with this ZIP's `index.html` contents, then **Commit changes** to `main`.
+3. If the GitHub editor doesn't handle the large HTML file, use **Add file > Upload files** after removing the old `index.html`, then commit. Keep the filename exactly `index.html`.
+4. Wait until the GitHub Pages deployment is complete under **Actions** or **Settings > Pages**, then refresh https://gtesten.github.io/after-hours-game/ .
 
-- Mutual opt-in accordions stay open as people check multiple approvals.
-- Gameplay now has a single large central challenge card, compact controls and optional illustrated examples. Scores/progress are collapsed into a panel under the card.
-- Buttons stay on the gameplay view instead of sending the page down to its footer. The footer is hidden during gameplay and the scroll position is reset after drawing.
-- Three direct chapter shortcuts: Warm Up, Turn Up, After Dark. Jumping never changes other players' comfort levels or approvals.
-- Three deck choices: Quick Dares (84 new, short challenges), All Cards (original larger library + quick additions), and My Private Cards (only user-created/imported).
-- Non-graphic, original SVG stick figures for common actions such as dancing, holding hands, kissing, or talking. These are illustrative examples, not explicit depictions. They can be hidden.
-- A new "Private intimacy (my cards)" category is available for custom user-written cards. It is OFF by default for everyone and requires opt-in both individually and globally. No explicit act descriptions are bundled.
-- Your old preferences and custom cards remain in local browser storage, when accessed using the same browser and origin; the upgrade does not wipe your settings.
+The new `index.html` is self-contained and does not require separate scripts or stylesheets. Other files already in the repository can stay; they're ignored by the new page.
 
-## Privacy and consent
+## Features
 
-The app stores all players' names, permissions, custom cards and progress locally in your browser. Hosting the app on a public site does not publish these local values. Custom cards do not sync automatically across devices. Use JSON export/import to move them yourself. Anyone may skip any activity without penalty. Ask before physical interaction.
+- No preloaded people or partners. Add 2–8 adults.
+- Individual card-type and comfort preferences, partner linking, couple-level mixing controls and bilateral approval for any cross-couple pairing.
+- 15 category types, three intensity settings, plus in-game filters and timers.
+- Explicit assignment of active player and approved partner (or solo); SVG stick-figure illustrations for non-graphic dares.
+- No-penalty Skip, Different dare, Complete and rotating player turns.
+- 133 original built-in, non-graphic, mostly short challenges; private custom card editor with JSON export/import.
+- Browser storage is local-only. The app makes no network/API requests or account sign-ins.
 
-## Troubleshooting
+## Limitations
 
-If an old cached version remains on GitHub Pages, reload with browser cache bypassed or remove and reinstall the home-screen shortcut after the update. Because local file (`file://`) pages and a hosted website have different storage origins, they do not automatically share player settings.
+- Sexual categories are selectable, but built-in cards are non-graphic. These categories do not include illustrated explicit sexual acts.
+- Preferences stored in previous versions are migrated on the same site/browser from `after-hours-v4-local` and `afterhours-free-v2` when possible. On a new browser or a file:// URL, import a previous backup to transfer them.
+- Custom cards and player data saved on one device do not sync to others. Back them up regularly.
+- Consent and comfort settings are never a substitute for confirming consent in the moment. Skip and stop at any time.
