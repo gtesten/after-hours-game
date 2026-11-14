@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#17121f">
+<title>Challenge Studio | After Hours</title>
+<style>
+:root{color-scheme:dark;--bg:#12101a;--panel:#282132;--panel2:#35293e;--edge:#6b5873;--ink:#fff9f6;--dim:#d5c6d7;--muted:#ad9db1;--pink:#f5acc2;--mint:#a6ead3;--peach:#ffdbc1;--red:#ffb2b8;--warn:#ffdb9c}*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;background:radial-gradient(ellipse at 8% 0,#56334c88,transparent 43%),radial-gradient(ellipse at 90% 35%,#35436565,transparent 44%),var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}button,input,textarea,select{font:inherit}button{cursor:pointer;touch-action:manipulation}button:disabled{opacity:.42;cursor:not-allowed}:focus-visible{outline:2px solid var(--mint);outline-offset:3px}a{color:var(--mint)}.wrap{width:min(1160px,calc(100% - 28px));margin:0 auto}header{height:76px;display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid #ffffff24}.logo{text-decoration:none;color:#fff;font-weight:1000;letter-spacing:-.7px;display:flex;align-items:center;gap:10px}.logo b{display:grid;place-items:center;background:linear-gradient(130deg,var(--pink),var(--mint));color:#3c2740;width:38px;height:38px;border-radius:12px}.logo em{color:var(--pink);font-style:normal}.head-links{display:flex;align-items:center;gap:9px}.age{color:var(--peach);border:1px solid #966984;border-radius:99px;padding:8px 11px;font-size:10px;letter-spacing:1px;font-weight:900}.btn{border:1px solid #8b708d;border-radius:12px;background:#483650;color:#fff;display:inline-flex;align-items:center;justify-content:center;padding:10px 15px;min-height:43px;font-weight:850;text-decoration:none;text-align:center}.btn.primary{background:linear-gradient(118deg,#9fe7d1,#e3f0dc);border:0;color:#172b27}.btn.quiet{background:#292232}.btn.danger{background:#4b2b3c;border-color:#b97489}.btn.sm{min-height:34px;padding:6px 11px;font-size:12px}main{padding-bottom:60px}.hero{margin:25px 0 20px;border:1px solid #8a6b8b;background:radial-gradient(circle at 90% 20%,#7ed5ba48,transparent 34%),linear-gradient(130deg,#4b304b,#29243b);border-radius:25px;padding:33px 37px}.kicker{text-transform:uppercase;letter-spacing:2px;color:var(--mint);font-size:11px;font-weight:900}h1{font-size:clamp(34px,5.4vw,54px);line-height:1.05;letter-spacing:-2px;margin:9px 0 12px}h2{font-size:22px;letter-spacing:-.5px;margin:0 0 9px}h3{font-size:17px;margin:0 0 7px}p{color:var(--dim);margin:0 0 11px}.hero p{max-width:720px}.stats{display:flex;flex-wrap:wrap;gap:21px;margin-top:22px}.stats .s{border-left:2px solid var(--mint);padding-left:12px;min-width:100px}.stats b{display:block;font-size:25px;line-height:1.13}.stats span{font-size:11px;color:var(--dim)}.tabs{display:flex;gap:8px;border-bottom:1px solid #ffffff27;padding-bottom:13px;margin-bottom:22px;flex-wrap:wrap}.tab{border:1px solid #6e5a75;border-radius:11px;padding:10px 15px;background:#30263a;color:#e8dce8;font-weight:850}.tab.active{color:#23332e;border-color:var(--mint);background:#b5efda}.view{display:none}.view.active{display:block}.layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(270px,.75fr);gap:17px;align-items:start}.panel{border:1px solid var(--edge);background:linear-gradient(145deg,#2b2235,#211c2b);border-radius:19px;padding:23px;margin-bottom:16px;box-shadow:0 10px 23px #04030922}.panel p{font-size:13px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:flex;flex-direction:column;gap:6px;font-size:12px;color:#f3deed;font-weight:780}.field.full{grid-column:1/-1}.field input,.field textarea,.field select,.input{width:100%;padding:11px 12px;min-height:43px;border:1px solid #7a6680;border-radius:11px;background:#15121d;color:var(--ink)}.field textarea{min-height:114px;resize:vertical}.field .helptext{font-size:11px;color:var(--muted);font-weight:400}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.notice{background:#392d44;border:1px solid #7a6785;padding:14px;border-radius:12px;color:var(--dim);font-size:13px}.notice strong{color:var(--mint)}.step{display:flex;gap:12px;border-bottom:1px solid #ffffff18;padding:12px 0}.step:last-child{border:0}.step b{display:grid;place-items:center;min-width:34px;height:34px;border-radius:10px;background:#46334e;color:var(--mint)}.step p{margin:4px 0 0}.divider{border-top:1px solid #ffffff25;margin:18px 0}.status{font-size:13px;min-height:20px;color:var(--mint);margin-top:12px}.stack{display:grid;gap:11px}.card{border:1px solid #705a77;border-radius:14px;background:#312639;padding:16px}.cardhead{display:flex;gap:9px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:9px}.card p{color:#fff1f2;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}.meta{color:#e5cbdc;font-size:11px;font-weight:850;letter-spacing:.5px;text-transform:uppercase}.tag{font-size:11px;border:1px solid #8b718e;padding:5px 9px;border-radius:99px;color:var(--dim);font-weight:850}.tag.ok{color:var(--mint);border-color:#528c78}.tag.warn{color:var(--warn);border-color:#a38c61}.tag.bad{color:var(--red);border-color:#bb7583}.issues{font-size:12px;color:var(--warn);margin:7px 0}.issues.bad{color:var(--red)}.filters{display:grid;grid-template-columns:220px 1fr;gap:10px;margin:12px 0 15px}.filters input,.filters select{background:#17121f;color:var(--ink);border:1px solid #79637e;border-radius:11px;padding:10px;width:100%}.empty{border:1px dashed #706176;border-radius:14px;padding:24px;text-align:center;color:var(--muted)}.code{font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;min-height:175px!important}.overlay{position:fixed;inset:0;background:#0b0812e8;display:grid;place-items:center;padding:20px;z-index:100}.overlay .panel{width:min(480px,100%)}footer{padding:18px 0 30px;border-top:1px solid #ffffff22;color:var(--muted);font-size:12px}@media(max-width:820px){.layout{grid-template-columns:1fr}.tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:24px}.panel{padding:18px}.filters{grid-template-columns:1fr}}@media(max-width:440px){header{height:65px}.age{display:none}.grid{grid-template-columns:1fr}.hero{padding:22px 18px}.tab{padding:9px 8px;font-size:13px}}
+</style>
+</head><body>
+<header class="wrap"><a class="logo" href="./index.html"><b>✦</b><span>AFTER<em>HOURS</em></span></a><div class="head-links"><span class="age">18+ ONLY</span><a href="./index.html" class="btn quiet sm">← Back to game</a></div></header>
+<main class="wrap">
+<section class="hero"><div class="kicker">Content management · no local LLM</div><h1>Challenge <span style="color:var(--mint)">Studio.</span></h1><p>Create a private card collection, validate JSON and CSV, flag duplicates, and optionally use browser AI for new ideas. No downloads, subscriptions, or local models needed.</p><div class="stats"><div class="s"><b id="storedCount">0</b><span>Cards in game</span></div><div class="s"><b id="readyCount">0</b><span>Clean imports</span></div><div class="s"><b id="flagCount">0</b><span>Review needed</span></div></div></section>
+<nav class="tabs" aria-label="Studio sections"><button type="button" class="tab active" data-view="create">✦ Create</button><button type="button" class="tab" data-view="review">⇩ Import & review</button><button type="button" class="tab" data-view="library">▤ My library</button><button type="button" class="tab" data-view="ai">✧ Browser AI</button></nav>
+<section class="view active" id="view-create"><div class="layout">
+<div class="panel"><div class="kicker">Card editor</div><h2 id="editorTitle">Create your own challenge</h2><p>Write a specific, optional activity. Cards only appear in games if the relevant players opt into that category and level.</p>
+<form id="cardForm"><input id="editId" type="hidden"><div class="grid"><label class="field full">Action / challenge<textarea id="cardText" maxlength="500" required placeholder="Write a clear, original action. You may use {actor} and {target} placeholders."></textarea><span class="helptext">500 characters maximum · Placeholders become readable text for the existing game</span></label>
+<label class="field">Category<select id="cardType"></select></label><label class="field">Intensity<select id="cardLevel"><option value="1">1 · Warm</option><option value="2" selected>2 · Hot</option><option value="3">3 · Wild</option></select></label>
+<label class="field">Participants<select id="cardScope"><option value="solo">Solo</option><option value="pair">Pair — mutual approval</option><option value="group">Group — non-contact only</option></select></label><label class="field">Illustration<select id="cardArt"><option value="spark">Abstract</option><option value="dance">Dance</option><option value="kiss">Kiss</option><option value="touch">Touch</option><option value="strip">Outfit</option><option value="talk">Conversation</option></select></label>
+<label class="field">Seconds<input id="cardSeconds" type="number" min="0" max="1800" step="1" value="60"></label><label class="field">Points<input id="cardPoints" type="number" min="0" max="500" step="1" value="10"></label><label class="field full">Position or note (optional)<input id="cardPosition" maxlength="100" placeholder="Optional note to save with this card"></label></div>
+<div class="actions"><button class="btn primary" type="submit" id="saveCard">Save private card</button><button class="btn quiet" type="button" id="cancelEdit" hidden>Cancel edit</button></div><div class="status" id="createStatus" role="status"></div></form></div>
+<aside class="panel"><h2>A better content workflow</h2><div class="step"><b>01</b><div><strong>Exact categories</strong><p>Questions about an activity are not the activity. Suspicious categories are flagged for review, not silently relabeled.</p></div></div><div class="step"><b>02</b><div><strong>Individual boundaries</strong><p>Player opt-ins and mutually permitted pairings still control which cards enter the game.</p></div></div><div class="step"><b>03</b><div><strong>Local, not public</strong><p>Cards save in this browser, not on GitHub. Back up your data to move between devices.</p></div></div><div class="notice"><strong>Group support:</strong> The compatible game patch in this package supports non-contact group cards for dance, roleplay, party, and talk only. All players must opt in; group contact is never inferred.</div></aside>
+</div></section>
+<section class="view" id="view-review"><div class="layout"><div class="panel"><div class="kicker">Bulk intake</div><h2>Import JSON or CSV</h2><p>Paste a model response or select a file. Every row is checked before reaching your game.</p><label class="field">Select file<input type="file" id="importFile" accept=".json,.csv,application/json,text/csv"></label><div class="divider"></div><label class="field">Or paste text<textarea id="importPaste" class="code" spellcheck="false" placeholder='{"challenges":[{"id":"card-001","type":"dance","level":2,"scope":"solo","text":"{actor} performs a 20-second freestyle dance.","position":"","art":"dance","seconds":20,"points":10}]}'></textarea></label><div class="actions"><button class="btn primary" type="button" id="analyzePaste">Analyze cards</button><button class="btn quiet" type="button" id="clearQueue">Clear queue</button></div><div class="status" id="importStatus" role="status"></div></div>
+<aside class="panel"><h2>Quality control</h2><p>We enforce required fields and supported categories, reject unsupported placeholders and scope types, and compare against existing custom cards.</p><div class="notice"><strong>Expected format:</strong> a JSON object with a <code>challenges</code> array, a JSON array, or CSV headers <code>id,type,level,scope,text,position,art,seconds,points</code>.</div><p style="margin-top:13px">Advanced categories receive a human-review warning rather than automatic AI approval. A warning cannot be bulk-approved.</p></aside></div>
+<div class="panel"><div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center"><div><h2>Review queue</h2><p id="queueSummary">Nothing pending.</p></div><button type="button" class="btn primary" id="approveClean">Save all clean cards</button></div><div class="stack" id="reviewList"></div></div></section>
+<section class="view" id="view-library"><div class="panel"><div style="display:flex;justify-content:space-between;gap:13px;flex-wrap:wrap"><div><div class="kicker">Saved on this device</div><h2>Custom card library</h2><p>Edits are immediately saved to the same browser storage used by After Hours. Reload the game after any changes.</p></div><div class="actions" style="margin:0"><button type="button" class="btn quiet" id="exportJson">Export JSON</button><button type="button" class="btn quiet" id="exportCsv">Export CSV</button></div></div><div class="filters"><select id="filterType" aria-label="Filter category"></select><input id="searchCards" type="search" placeholder="Search text..." aria-label="Search your cards"></div><p id="librarySummary"></p><div class="stack" id="libraryList"></div></div></section>
+<section class="view" id="view-ai"><div class="layout"><div class="panel"><div class="kicker">Optional browser AI</div><h2>Generate, then validate</h2><p>Choose a category and copy a structured request. Open ChatGPT (or another browser-based AI), then paste its output into Import & review. Nothing automatically sends your private data to an AI service.</p><div class="grid"><label class="field">Category<select id="aiType"></select></label><label class="field">Intensity<select id="aiLevel"><option value="1">Warm</option><option value="2">Hot</option><option value="3" selected>Wild</option></select></label><label class="field">Participants<select id="aiScope"><option value="solo">Solo</option><option value="pair">Pair</option><option value="group">Group, non-contact</option></select></label><label class="field">Number of cards<select id="aiCount"><option value="3">3</option><option value="5" selected>5</option><option value="8">8</option></select></label></div><div class="actions"><button type="button" class="btn primary" id="copyPrompt">Copy AI request</button><a href="https://chatgpt.com/" class="btn quiet" target="_blank" rel="noopener noreferrer">Open ChatGPT ↗</a><button type="button" class="btn quiet" id="toImport">Import AI output →</button></div><div class="status" role="status" id="aiStatus"></div><label class="field">Request preview<textarea id="promptPreview" class="code" readonly spellcheck="false"></textarea></label></div>
+<aside class="panel"><h2>Safe by design</h2><div class="step"><b>✓</b><div><strong>No cloud key required</strong><p>Public GitHub Pages sites should never contain private API keys.</p></div></div><div class="step"><b>✓</b><div><strong>No surprise uploads</strong><p>Only the generic request is copied. Do not paste player names or private boundaries into a third-party AI.</p></div></div><div class="step"><b>✓</b><div><strong>No auto-approval</strong><p>AI content may be vague, repeated, or incorrectly categorized. You control final acceptance.</p></div></div></aside></div></section>
+</main><footer class="wrap">AFTER HOURS · Challenge Studio · 18+ · Local storage · Every activity optional · Skip anytime</footer>
+<div class="overlay" id="ageOverlay" hidden><div class="panel"><div class="kicker">Adults only</div><h2>Before you enter</h2><p>Challenge Studio is intended for consenting adults aged 18 or older. No card substitutes for any participant's ongoing consent.</p><div class="actions"><button type="button" class="btn primary" id="ageAccept">I am 18 or older</button><a href="./index.html" class="btn quiet">Back to game</a></div></div></div>
+<script>(() => {
+  'use strict';
+  const KEY = 'after-hours-v7-standalone';
+  const TYPES = {
+    flirt:'Flirting', kiss:'Kissing', touch:'Sensual touch', dance:'Dancing', massage:'Massage',
+    strip:'Striptease', nudity:'Nudity', roleplay:'Roleplay', toys:'Sex toys', kink:'Kink / BDSM',
+    sex:'Sex / intercourse', oral:'Oral sex', anal:'Anal play', party:'Party games', talk:'Daring questions'
+  };
+  const ALIASES = {
+    'striptease':'strip','sex toys':'toys','toy':'toys','intercourse':'sex',
+    'sex / intercourse':'sex','oral sex':'oral','anal play':'anal','kink / bdsm':'kink',
+    'bdsm':'kink','daring questions':'talk','group games':'party',
+    'flirting':'flirt','kissing':'kiss','dancing':'dance','massage':'massage',
+    'sensual touch':'touch','nudity':'nudity','roleplay':'roleplay',
+    'party games':'party'
+  };
+  const GROUP_TYPES = new Set(['dance','party','talk','roleplay']);
+  const INTIMATE_TYPES = new Set(['sex','oral','anal','toys','kink','strip','nudity']);
+  const ART = new Set(['spark','dance','kiss','touch','strip','talk','heart']);
+  const $ = s => document.querySelector(s);
+  const $$ = s => [...document.querySelectorAll(s)];
+  const escapeHTML = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const makeId = () => 'studio-' + (globalThis.crypto && crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + '-' + Math.random().toString(36).slice(2));
+  const signature = s => String(s || '').toLowerCase().replace(/\{[^}]+\}/g,' ').replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
+  const tokens = s => new Set(signature(s).split(' ').filter(Boolean));
+  let queue = [];
+
+  function readState() {
+    try {
+      const value = JSON.parse(localStorage.getItem(KEY) || 'null');
+      return value && Array.isArray(value.custom) && Array.isArray(value.players) && value.settings && typeof value.settings === 'object' ? value : null;
+    } catch { return null; }
+  }
+  function getCustom() { return readState()?.custom || []; }
+  function mutateCards(callback) {
+    try {
+      const latest = readState();
+      if (!latest) return {ok:false, message:'Open After Hours in this browser first, accept the age gate, then return here. This protects existing game data and migrations.'};
+      const cards = callback(latest.custom.slice());
+      if (!Array.isArray(cards)) return {ok:false,message:'Card update cancelled.'};
+      if (cards.length > 500) return {ok:false,message:'The current game supports up to 500 imported custom cards. Export a backup before adding more.'};
+      latest.custom = cards;
+      localStorage.setItem(KEY, JSON.stringify(latest));
+      refresh();
+      return {ok:true};
+    } catch(e) {return {ok:false,message:'Could not save to this browser. Check private-browsing storage limits.'};}
+  }
+  function similar(a,b) {
+    const sa=tokens(a),sb=tokens(b);
+    if(Math.min(sa.size,sb.size)<6) return 0;
+    let shared=0;
+    for(const t of sa) if(sb.has(t)) shared++;
+    return shared / Math.max(1,new Set([...sa,...sb]).size);
+  }
+  function intField(input,name,defaultValue,maximum,warnings,errors) {
+    if(input === undefined || input === null || input === '') {warnings.push(name+' missing; defaulted to '+defaultValue);return defaultValue;}
+    let value=input;
+    if(Array.isArray(value)) {
+      if(value.length===1) {warnings.push(name+' array converted to a single number');value=value[0];}
+      else {errors.push(name+' must be one integer, not an array');return defaultValue;}
+    }
+    if(typeof value==='string' && /^\d+$/.test(value.trim())) value=Number(value.trim());
+    if(!Number.isInteger(value) || value<0 || value>maximum) {errors.push(name+' must be an integer between 0 and '+maximum);return defaultValue;}
+    return value;
+  }
+  function normalize(raw, excludeId, comparisons) {
+    const errors=[], warnings=[];
+    if(!raw || typeof raw!=='object' || Array.isArray(raw))return {card:null,errors:['Card must be a JSON object'],warnings};
+    const originType=String(raw.type ?? '').trim().toLowerCase();
+    const type=TYPES[originType] ? originType : ALIASES[originType];
+    if(!type) errors.push('Unknown category: '+(originType||'(missing)')+' — choose an exact supported category; no automatic relabeling');
+    else if(type!==originType) warnings.push('Category alias mapped to '+TYPES[type]);
+    const scope=String(raw.scope ?? raw.kind ?? '').trim().toLowerCase();
+    if(!['solo','pair','group'].includes(scope)) errors.push('Scope must be exactly solo, pair, or group (received '+(scope||'nothing')+')');
+    if(scope==='group' && type && !GROUP_TYPES.has(type))errors.push('Group cards are currently supported only for non-contact dance, party, roleplay and talk');
+    if(scope==='group' && !readState()?.studioGroupEnabled)errors.push('Group cards require the patched game engine. Upload the upgraded index.html, open the game once, then retry.');
+    const level=intField(raw.level,'level',2,3,warnings,errors);
+    if(level<1) errors.push('Level must be 1, 2 or 3');
+    const seconds=intField(raw.seconds,'seconds',60,1800,warnings,errors);
+    const points=intField(raw.points,'points',10,500,warnings,errors);
+    const sourceText=String(raw.sourceText ?? raw.text ?? '').trim();
+    if(!sourceText)errors.push('Challenge text is required');
+    if(sourceText.length>500)errors.push('Challenge text exceeds 500 characters');
+    const ph=[...sourceText.matchAll(/\{([^}]+)\}/g)].map(m=>m[1]);
+    for(const token of ph){if(!['actor','target'].includes(token))errors.push('Unsupported placeholder {'+token+'}; the current game cannot assign extra participants');}
+    if(scope==='solo' && ph.includes('target'))errors.push('Solo cards cannot use {target}');
+    if(scope==='group' && ph.includes('target'))errors.push('Group cards cannot use {target}; all participants must opt in');
+    let art=String(raw.art ?? 'spark').trim().toLowerCase();
+    if(!ART.has(art)){art='spark';warnings.push('Unsupported illustration replaced with abstract artwork');}
+    let position='';
+    if(Array.isArray(raw.position)) {position=raw.position.map(x=>String(x)).join(' / ');warnings.push('Position array converted to a string');}
+    else if(raw.position!==undefined && raw.position!==null)position=String(raw.position);
+    if(position.length>100){errors.push('Position/note exceeds 100 characters');position=position.slice(0,100);}
+    let id=typeof raw.id==='string' && raw.id.trim() && raw.id.length<=90 ? raw.id.trim() : makeId();
+    if(!raw.id || typeof raw.id!=='string') warnings.push('Generated a unique string ID');
+    if(/^b\d+$/.test(id) || comparisons.some(c=>c.id===id && c.id!==excludeId)) {id=makeId();warnings.push('Conflicting card ID replaced with a unique ID');}
+    const normalText=sourceText.replace(/\{actor\}/g,scope==='group'?'Everyone':'The selected player').replace(/\{target\}/g,'the assigned partner');
+    if(INTIMATE_TYPES.has(type))warnings.push('Adult category requires individual human confirmation that the action actually matches its label');
+    if(scope==='group')warnings.push('Confirm that this group activity has no physical contact or restraint, and that every adult opts in');
+    if(['sex','oral','anal'].includes(type) && /\b(ask|discuss|describe|imagine|prefer|preferences|question|kiss|kissing|massage|conversation)\b/i.test(sourceText))warnings.push('Possible category mismatch: discussion or mild activity may not match the named category');
+    if(scope==='group' && /\b(touch|kiss|hold hands|massage|blindfold|tie|restrain)\b/i.test(sourceText))errors.push('Group cards cannot involve contact or restraint; use non-contact group activities only');
+    const others=comparisons.filter(c=>c.id!==excludeId);
+    if(normalText && others.some(c=>signature(c.sourceText||c.text)===signature(sourceText)))errors.push('Exact duplicate of an existing card');
+    else if(normalText && others.some(c=>similar(c.sourceText||c.text,sourceText)>=.77))warnings.push('Possible near-duplicate of an existing custom card');
+    const card={id,type:type||originType,level,kind:scope,text:normalText,sourceText,art,seconds,points,position,custom:true};
+    return {card,errors:[...new Set(errors)],warnings:[...new Set(warnings)],reviewed:false};
+  }
+  function labelCard(c) {return (TYPES[c.type]||c.type)+' · Level '+c.level+' · '+(c.kind==='group'?'Group':c.kind==='pair'?'Pair':'Solo');}
+  function showStatus(id,message,bad=false){const e=$(id);e.textContent=message;e.style.color=bad?'#ffb3bc':'#a6ead3';}
+  function switchView(view){$$('.view').forEach(e=>e.classList.toggle('active',e.id==='view-'+view));$$('.tab').forEach(e=>e.classList.toggle('active',e.dataset.view===view));window.scrollTo({top:0,behavior:'instant'});if(view==='library')renderLibrary();if(view==='review')renderQueue();if(view==='ai')updatePrompt();}
+  function refresh(){const n=getCustom().length;$('#storedCount').textContent=String(n);$('#readyCount').textContent=String(queue.filter(x=>!x.errors.length && !x.warnings.length).length);$('#flagCount').textContent=String(queue.filter(x=>x.errors.length||x.warnings.length).length);renderLibrary();renderQueue();}
+  function parseCSV(value){
+    const rows=[];let row=[],cell='',quoted=false;
+    for(let i=0;i<value.length;i++){
+      const ch=value[i];
+      if(ch==='"') {if(quoted && value[i+1]==='"'){cell+='"';i++;}else quoted=!quoted;}
+      else if(ch===','&&!quoted){row.push(cell);cell='';}
+      else if((ch==='\n'||ch==='\r')&&!quoted){if(ch==='\r'&&value[i+1]==='\n')i++;row.push(cell);if(row.some(v=>v.trim()))rows.push(row);row=[];cell='';}
+      else cell+=ch;
+    }
+    if(quoted)throw Error('CSV contains an unclosed quoted field');
+    row.push(cell);if(row.some(v=>v.trim()))rows.push(row);
+    if(rows.length<2)throw Error('CSV requires a header row and at least one card');
+    const head=rows.shift().map(v=>v.replace(/^\uFEFF/,'').trim());
+    if(!head.includes('type')||!head.includes('text'))throw Error('CSV headers must include type and text');
+    return rows.map(row=>Object.fromEntries(head.map((h,i)=>[h,row[i]??''])));
+  }
+  function parseIntake(text,fileName=''){
+    if(text.length>2000000)throw Error('Import is larger than 2 MB');
+    const trimmed=text.trim();if(!trimmed)throw Error('Paste some JSON or CSV first');
+    let items;
+    if(fileName.toLowerCase().endsWith('.csv')||(!trimmed.startsWith('{')&&!trimmed.startsWith('[')))items=parseCSV(trimmed);
+    else {const data=JSON.parse(trimmed);items=Array.isArray(data)?data:data?.challenges;}
+    if(!Array.isArray(items))throw Error('Expected a JSON array or object containing challenges: []');
+    if(!items.length)throw Error('No challenges found');
+    if(items.length>500)throw Error('Please import 500 or fewer cards at once');
+    const reference=[...getCustom(),...queue.map(q=>q.card).filter(Boolean)];
+    const newItems=items.map(item=>{const review=normalize(item,null,reference);if(review.card)reference.push(review.card);return review;});
+    queue.push(...newItems);
+    refresh();switchView('review');
+    showStatus('#importStatus','Staged '+newItems.length+' card(s). Review problems before saving.');
+  }
+  function renderQueue(){
+    $('#queueSummary').textContent=queue.length+' pending · '+queue.filter(x=>x.errors.length).length+' blocked · '+queue.filter(x=>!x.errors.length && x.warnings.length).length+' require review';
+    $('#approveClean').disabled=!queue.some(x=>!x.errors.length&&!x.warnings.length);
+    $('#reviewList').innerHTML=queue.map((r,i)=>{
+      const bad=r.errors.length>0,warning=r.warnings.length>0;
+      const tag=bad?'Blocked':warning?'Review required':'Clean';
+      const issue=(bad?r.errors:[]).map(x=>'<div class="issues bad">✕ '+escapeHTML(x)+'</div>').join('')+r.warnings.map(x=>'<div class="issues">! '+escapeHTML(x)+'</div>').join('');
+      return '<article class="card"><div class="cardhead"><span class="meta">'+escapeHTML(r.card?labelCard(r.card):'Invalid card')+'</span><span class="tag '+(bad?'bad':warning?'warn':'ok')+'">'+tag+'</span></div><p>'+escapeHTML(r.card?.sourceText||'(missing text)')+'</p>'+issue+
+      (warning&&!bad?'<label style="display:flex;gap:9px;align-items:center;font-size:12px"><input type="checkbox" data-review="'+i+'" '+(r.reviewed?'checked':'')+'> I checked this card’s category, scope, and warnings</label>':'')+
+      '<div class="actions"><button class="btn primary sm" data-save="'+i+'" '+(bad||warning&&!r.reviewed?'disabled':'')+'>Save card</button><button class="btn quiet sm" data-editqueue="'+i+'" '+(!r.card?'disabled':'')+'>Edit details</button><button class="btn danger sm" data-removequeue="'+i+'">Discard</button></div></article>';
+    }).join('')||'<div class="empty">No cards awaiting review. Paste JSON or import a file above.</div>';
+  }
+  function saveQueue(index){
+    const entry=queue[index];if(!entry||entry.errors.length||(entry.warnings.length&&!entry.reviewed))return false;
+    const verdict=normalize(entry.card,null,getCustom());
+    if(verdict.errors.length){entry.errors=verdict.errors;refresh();return false;}
+    const card=entry.card;
+    const result=mutateCards(cards=>[...cards,card]);
+    if(!result.ok){showStatus('#importStatus',result.message,true);return false;}
+    queue.splice(index,1);refresh();return true;
+  }
+  function saveAllClean(){let added=0;for(let i=queue.length-1;i>=0;i--){if(!queue[i].errors.length&&!queue[i].warnings.length && saveQueue(i))added++;}showStatus('#importStatus',added+' clean card(s) saved. Cards with warnings still need your review.');}
+  function fillEditor(card){
+    $('#editId').value=card.id||'';$('#cardText').value=card.sourceText||card.text||'';
+    $('#cardType').value=card.type;$('#cardLevel').value=String(card.level);$('#cardScope').value=card.kind;
+    $('#cardArt').value=ART.has(card.art)?card.art:'spark';$('#cardSeconds').value=String(card.seconds??60);
+    $('#cardPoints').value=String(card.points??10);$('#cardPosition').value=card.position||'';
+    $('#editorTitle').textContent=card.id?'Edit your private card':'Create your own challenge';
+    $('#saveCard').textContent=card.id?'Save changes':'Save private card';$('#cancelEdit').hidden=!card.id;
+    switchView('create');$('#cardText').focus();
+  }
+  function resetEditor(){
+    $('#cardForm').reset();$('#editId').value='';$('#editorTitle').textContent='Create your own challenge';
+    $('#saveCard').textContent='Save private card';$('#cancelEdit').hidden=true;showStatus('#createStatus','');
+  }
+  function renderLibrary(){
+    const cards=getCustom(),type=$('#filterType').value,query=$('#searchCards').value.trim().toLowerCase();
+    const visible=cards.filter(c=>(!type||type==='all'||c.type===type)&&(!query||(c.text||'').toLowerCase().includes(query)));
+    $('#librarySummary').textContent=visible.length+' matching card(s) of '+cards.length+' saved in this browser';
+    $('#libraryList').innerHTML=visible.map(c=>'<article class="card"><div class="cardhead"><span class="meta">'+escapeHTML(labelCard(c))+'</span><span class="tag ok">Private</span></div><p>'+escapeHTML(c.sourceText||c.text)+'</p><div class="actions"><button class="btn quiet sm" data-editcard="'+escapeHTML(c.id)+'">Edit</button><button class="btn danger sm" data-deletecard="'+escapeHTML(c.id)+'">Delete</button></div></article>').join('')||'<div class="empty">No matching private cards. Create one, or import your own library.</div>';
+  }
+  function downloadFile(filename,contents,mime){
+    const blob=new Blob([contents],{type:mime}),url=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=url;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);
+  }
+  function exportedCards(){return getCustom().map(c=>({id:c.id,type:c.type,level:c.level,scope:c.kind||'pair',text:c.sourceText||c.text,position:c.position||'',art:c.art||'spark',seconds:c.seconds??60,points:c.points??10}));}
+  function exportJSON(){downloadFile('after-hours-studio-challenges.json',JSON.stringify({challenges:exportedCards()},null,2),'application/json');}
+  function exportCSV(){
+    const fields=['id','type','level','scope','text','position','art','seconds','points'];
+    const rows=[fields.join(',')];
+    const quote=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
+    exportedCards().forEach(card=>rows.push(fields.map(f=>quote(card[f])).join(',')));
+    downloadFile('after-hours-studio-challenges.csv',rows.join('\r\n'),'text/csv');
+  }
+  function promptText(){
+    const cat=$('#aiType').value,lev=+$('#aiLevel').value,scope=$('#aiScope').value,count=+$('#aiCount').value;
+    const groupLimit=scope==='group'&&!GROUP_TYPES.has(cat);
+    return [
+      'Create '+count+' original, non-graphic, action-based party-game challenges for consenting adults aged 18+.',
+      'Category: '+cat+' ('+TYPES[cat]+'). Difficulty level: '+lev+'. Scope: '+scope+'.',
+      groupLimit?'This category is not supported for group cards in this game. Return {"challenges":[]} instead of mislabeling the activity.':'Keep every card specific, distinct, optional, and accurately categorized.',
+      'Do not replace an activity with a question about that activity, kissing, or filler.',
+      'Only include activities appropriate for this category and scope. If a card cannot match, omit it.',
+      'Group cards must be non-contact, and allowed only for dance, roleplay, party, or talk.',
+      'Avoid explicit anatomical detail. Every activity requires affirmative, ongoing consent and may be skipped.',
+      'Return JSON ONLY, with a top-level {"challenges":[]} array.',
+      'Each card requires: id (unique string), type (exactly "'+cat+'"), level (integer '+lev+'), scope (exactly "'+scope+'"), text (clear action, max 500 characters), position (string), art ("spark"), seconds (integer from 0 to 1800), points (integer from 0 to 500).',
+      'The only allowed placeholders are {actor} and {target}; {target} is only for pair cards.',
+      'No extra keys, Markdown fences, commentary, arrays for numbers, or undefined placeholders.'
+    ].join('\n\n');
+  }
+  function updatePrompt(){$('#promptPreview').value=promptText();}
+  async function copyPrompt(){const t=promptText();try{await navigator.clipboard.writeText(t);showStatus('#aiStatus','Copied. Open your browser AI, paste the request, then bring its JSON back to Import & review.');}catch{try{$('#promptPreview').focus();$('#promptPreview').select();document.execCommand('copy');showStatus('#aiStatus','Prompt selected. Copy it manually if needed.');}catch{showStatus('#aiStatus','Select the prompt preview and copy manually.',true)}}}
+  function wire(){
+    const opts=Object.entries(TYPES).map(([id,label])=>'<option value="'+id+'">'+escapeHTML(label)+'</option>').join('');
+    $('#cardType').innerHTML=opts;$('#aiType').innerHTML=opts;
+    $('#filterType').innerHTML='<option value="all">All categories</option>'+opts;
+    $$('.tab').forEach(btn=>btn.addEventListener('click',()=>switchView(btn.dataset.view)));
+    $('#cardForm').addEventListener('submit',e=>{
+      e.preventDefault();const id=$('#editId').value;
+      const raw={id:id||makeId(),text:$('#cardText').value,type:$('#cardType').value,level:Number($('#cardLevel').value),scope:$('#cardScope').value,art:$('#cardArt').value,seconds:Number($('#cardSeconds').value),points:Number($('#cardPoints').value),position:$('#cardPosition').value};
+      const candidate=normalize(raw,id,getCustom());
+      if(candidate.errors.length){showStatus('#createStatus',candidate.errors.join(' · '),true);return;}
+      if(!id && candidate.warnings.length){queue.push(candidate);refresh();resetEditor();switchView('review');showStatus('#importStatus','Card needs human confirmation: '+candidate.warnings.join(' · '));return;}
+      const result=mutateCards(cards=>id?cards.map(c=>c.id===id?candidate.card:c):[...cards,candidate.card]);
+      showStatus('#createStatus',result.ok?'Card saved. Reload the game to use it.':result.message,!result.ok);
+      if(result.ok){resetEditor();switchView('library');}
+    });
+    $('#cancelEdit').addEventListener('click',resetEditor);
+    $('#importFile').addEventListener('change',async e=>{const file=e.target.files[0];e.target.value='';if(!file)return;try{if(file.size>2000000)throw Error('File exceeds 2 MB');parseIntake(await file.text(),file.name);}catch(err){showStatus('#importStatus',err.message,true);}});
+    $('#analyzePaste').addEventListener('click',()=>{try{parseIntake($('#importPaste').value);$('#importPaste').value='';}catch(err){showStatus('#importStatus',err.message,true);}});
+    $('#clearQueue').addEventListener('click',()=>{queue=[];refresh();showStatus('#importStatus','Review queue cleared. Saved game cards were not changed.');});
+    $('#approveClean').addEventListener('click',saveAllClean);
+    $('#reviewList').addEventListener('change',e=>{if(e.target.dataset.review!==undefined){queue[Number(e.target.dataset.review)].reviewed=e.target.checked;renderQueue();}});
+    $('#reviewList').addEventListener('click',e=>{const btn=e.target.closest('button');if(!btn)return;
+      if(btn.dataset.save!==undefined){const i=Number(btn.dataset.save);if(saveQueue(i))showStatus('#importStatus','Card saved to After Hours. Reload the game to use it.');return;}
+      if(btn.dataset.removequeue!==undefined){queue.splice(Number(btn.dataset.removequeue),1);refresh();return;}
+      if(btn.dataset.editqueue!==undefined){const i=Number(btn.dataset.editqueue),card=queue[i]?.card;if(!card)return;queue.splice(i,1);refresh();fillEditor({...card,id:''});showStatus('#createStatus','Editing imported card. Saving will validate it again.');return;}
+    });
+    $('#libraryList').addEventListener('click',e=>{const btn=e.target.closest('button');if(!btn)return;
+      if(btn.dataset.editcard){const card=getCustom().find(x=>x.id===btn.dataset.editcard);if(card)fillEditor(card);}
+      if(btn.dataset.deletecard){const id=btn.dataset.deletecard;if(!confirm('Delete this private challenge from this device?'))return;const result=mutateCards(cards=>cards.filter(x=>x.id!==id));if(!result.ok)alert(result.message);}
+    });
+    $('#filterType').addEventListener('change',renderLibrary);$('#searchCards').addEventListener('input',renderLibrary);
+    $('#exportJson').addEventListener('click',exportJSON);$('#exportCsv').addEventListener('click',exportCSV);
+    ['aiType','aiLevel','aiScope','aiCount'].forEach(id=>$('#'+id).addEventListener('change',updatePrompt));
+    $('#copyPrompt').addEventListener('click',copyPrompt);$('#toImport').addEventListener('click',()=>switchView('review'));
+    $('#ageAccept').addEventListener('click',()=>{sessionStorage.setItem('after-hours-studio-age','yes');$('#ageOverlay').hidden=true;});
+    window.addEventListener('storage',e=>{if(e.key===KEY)refresh();});
+    refresh();updatePrompt();
+    try{if(!readState()?.accepted && sessionStorage.getItem('after-hours-studio-age')!=='yes')$('#ageOverlay').hidden=false;}catch{$('#ageOverlay').hidden=false;}
+    if(!readState())showStatus('#createStatus','Open the main After Hours game once in this browser before saving cards, to preserve your existing data.',true);
+  }
+  wire();
+})();
+</script>
+</body></html>
